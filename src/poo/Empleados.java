@@ -7,22 +7,30 @@ public class Empleados {
   private String nombre;
   private int edad;
   private int sueldo;
-  public int estado;
-  public static int sEstado = 1;
+  public int id;
+  private static int sId = 1;
 
-  // CONSTRUCTOR
-  public Empleados(String nombre, String edad, String sueldo) {
+  // CONSTRUCTOR 1
+  public Empleados(String nombre, String edad, int sueldo) {
     this.nombre = nombre;
     this.edad = Integer.parseInt(edad);
-    this.sueldo = Integer.parseInt(sueldo);
-    this.estado = sEstado;
-    sEstado++;
+    this.sueldo = sueldo;
+    this.id = sId;
+    sId++;
+  }
+
+  // CONSTRUCTOR 2. En caso de que falten parametros, java busca otro constructor
+  // que cumpla con esa cantidad de parametros.
+  public Empleados(String nombre) {
+    // Como los otros dos parametros no tienen un valor, usamos this() para llenar
+    // con un predeterminado esos otros campos.
+    this(nombre, "18", 173);
   }
 
   // GETTER PARA INFO DE EMPLEADO. No llevan this porque aya sabemos de que objeto
   // estamos recuperando info.
   public String info() {
-    String info = "Empleado: " + nombre + " con edad de: " + edad + " con sueldo: " + sueldo;
+    String info = "Empleado: " + nombre + " con edad de: " + edad + " con sueldo: " + sueldo + " Id: " + id;
     return info;
   }
 
@@ -30,5 +38,11 @@ public class Empleados {
   // info del objeto en cuestion que ha sido invocado.
   public void rise() {
     this.sueldo++;
+  }
+
+  // METODO ESTATICO. Es un GETTER que me devuelve una variable ESTATICA. Los
+  // metodos estaticos solo devuelven variables estaticas.
+  public static int verId() {
+    return sId;
   }
 }
