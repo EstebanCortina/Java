@@ -11,10 +11,10 @@ public class Empleados {
   private static int sId = 1;
 
   // CONSTRUCTOR 1
-  public Empleados(String nombre, String edad, int sueldo) {
+  public Empleados(String nombre, String edad) {
     this.nombre = nombre;
     this.edad = Integer.parseInt(edad);
-    this.sueldo = sueldo;
+    this.sueldo = 173;
     this.id = sId;
     sId++;
   }
@@ -24,13 +24,13 @@ public class Empleados {
   public Empleados(String nombre) {
     // Como los otros dos parametros no tienen un valor, usamos this() para llenar
     // con un predeterminado esos otros campos.
-    this(nombre, "18", 173);
+    this(nombre, "18");
   }
 
   // GETTER PARA INFO DE EMPLEADO. No llevan this porque aya sabemos de que objeto
   // estamos recuperando info.
   public String info() {
-    String info = "Empleado: " + nombre + " con edad de: " + edad + " con sueldo: " + sueldo + " Id: " + id;
+    String info = "Empleado: " + nombre + " con edad de: " + edad + " con sueldo: " + " Id: " + id;
     return info;
   }
 
@@ -38,6 +38,10 @@ public class Empleados {
   // info del objeto en cuestion que ha sido invocado.
   public void rise() {
     this.sueldo++;
+  }
+
+  public int dimeSueldo() {
+    return sueldo;
   }
 
   // METODO ESTATICO. Es un GETTER que me devuelve una variable ESTATICA. Los
