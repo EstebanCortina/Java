@@ -20,4 +20,8 @@ public class Jefes extends Trabajadores {
     // Super es el equivalente para this pero en las clases.
     return super.trabajar() + " pesos siendo jefe";
   }
+
+  public String mandar() {
+    return "Estoy mandando";
+  }
 }

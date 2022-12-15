@@ -8,4 +8,8 @@ public class Conserjes extends Trabajadores {
   public String trabajar() {
     return super.trabajar() + " pesos siendo conserje";
   }
+
+  public String limpiar() {
+    return "Estoy limpieando";
+  }
 }
