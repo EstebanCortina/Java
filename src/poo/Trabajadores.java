@@ -29,7 +29,10 @@ public class Trabajadores {
     this.salario = salarioN;
   }
 
-  public int verSalario() {
+  // Con final evitamos que se creen metodos polimorficos, ya que impide que
+  // pongamos el mismo nombre del metodo a otro metodo en otra clase que se
+  // extienda.
+  final public int verSalario() {
     return salario;
   }
 

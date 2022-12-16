@@ -1,7 +1,8 @@
 package poo;
 
 //En esta clase ahora extiendo la base que es Trabajadores, ya que contiene las caracteristicas que todos mis trabajadores comparten. La diferencia va a estar en que cada trabajo tiene una tarea diferente que realiza.
-public class Jefes extends Trabajadores {
+//La clase al ser final, ya nadie podra extenderla a su propia clase.
+final public class Jefes extends Trabajadores {
   // private int salario = salarioBase + 20;
   public Jefes(String nombre) {
     // Aqui con super estoy llamando a mi SUPERclase (Trabajadores) y le estoy
