@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Enumerados",
+      "request": "launch",
+      "mainClass": "poo.Enumerados",
+      "projectName": "Java_493f4e20"
+    },
+    {
+      "type": "java",
       "name": "Launch ClasesAbstractas",
       "request": "launch",
       "mainClass": "poo.ClasesAbstractas",
