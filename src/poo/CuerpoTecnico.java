@@ -9,6 +9,7 @@ public class CuerpoTecnico extends PersonalClub implements Acciones {
     this.cargo = cargo;
   }
 
+  @Override
   public String getJob() {
     return "Yo soy: " + NOMBRE + " y trabajo de: " + cargo;
   }
